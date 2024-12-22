@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Webpage description goes here" />
+    <meta charset="utf-8" />
+    <title>Family Tree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="family.js"></script>
+    <script src="fontAwesome.js"></script>
+    <script src="views.css"></script>
+  </head>
+
+  <body>
+    <div id="divFamily"></div>
+    <script>
+      var params = {
+        data: [
+          {
+            id: 1,
+            pid: 2,
+            gender: "male",
+            title: "Title",
+            name: "Raj Rajeshawar Mahadev",
+            photo: "",
+            addr: "Rohida",
+            cn: "in",
+          },
+          {
+            id: 2,
+            pid: 1,
+            gender: "male",
+            title: "Title",
+            name: "Raj Rajeshawari Mata",
+            photo: "",
+            addr: "Rohida",
+            cn: "in",
+          },
+          {
+            id: 3,
+            pid: 4,
+            mid: 2,
+            fid: 1,
+            gender: "male",
+            title: "Title",
+            name: "Amrit Dave",
+            photo: "",
+            addr: "Udaipur",
+            cn: "in",
+          },
+          {
+            id: 4,
+            pid: 3,
+            gender: "female",
+            title: "Title",
+            name: "Sadhana Dave",
+            photo: "",
+            addr: "Udaipur",
+            cn: "in",
+          },
+          {
+            id: 5,
+            pid: 6,
+            mid: 4,
+            fid: 3,
+            gender: "female",
+            title: "Title",
+            name: "Monika Vyas",
+            photo: "",
+            addr: "Indore",
+            cn: "in",
+          },
+          {
+            id: 6,
+            pid: 3,
+            mid: "",
+            fid: "",
+            gender: "male",
+            title: "Title",
+            name: "Paritosh Vyas",
+            photo: "",
+            addr: "Indore",
+            cn: "in",
+          },
+          {
+            id: 7,
+            pid: 8,
+            mid: 12,
+            fid: 13,
+            gender: "female",
+            title: "Title",
+            name: "Paridhi Vora",
+            photo: "",
+            addr: "Udaipur",
+            cn: "in",
+          },
+          {
+            id: 8,
+            pid: 7,
+            mid: 4,
+            fid: 3,
+            gender: "male",
+            title: "Title",
+            name: "Khushal Dave",
+            photo: "",
+            addr: "Udaipur",
+            cn: "in",
+          },
+          {
+            id: 9,
+            pid: "",
+            mid: 7,
+            fid: 8,
+            gender: "male",
+            title: "Master",
+            name: "Tanush Dave",
+            photo: "",
+            addr: "Udaipur",
+            cn: "in",
+          },
+          {
+            id: 10,
+            pid: "",
+            mid: 5,
+            fid: 6,
+            gender: "male",
+            title: "Master",
+            name: "Amitosh Vyas",
+            photo: "",
+            addr: "Indore",
+            cn: "in",
+          },
+          {
+            id: 11,
+            pid: "",
+            mid: 5,
+            fid: 6,
+            gender: "female",
+            title: "Master",
+            name: "Amita Vyas",
+            photo: "",
+            addr: "Indore",
+            cn: "in",
+          },
+          {
+            id: 12,
+            pid: 13,
+            mid: "",
+            fid: "",
+            gender: "female",
+            title: "Title",
+            name: "Heena Vora",
+            photo: "",
+            addr: "Mumbai",
+            cn: "in",
+          },
+          {
+            id: 13,
+            pid: 12,
+            mid: 2,
+            fid: 1,
+            gender: "male",
+            title: "Title",
+            name: "Pravin Vora",
+            photo: "",
+            addr: "Mumbai",
+            cn: "in",
+          },
+        ] /*Local variable or file path*/,
+        search: true, //false
+        container: "divFamily",
+        template: "circle", // "rounded" // "raised" // "tilted"
+      };
+      var tree = new Lineage(params);
+      tree.load();
+    </script>
+  </body>
+</html>
